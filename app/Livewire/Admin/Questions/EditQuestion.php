@@ -38,6 +38,7 @@ class EditQuestion extends Component
 
     }
 
+    //valida y guarda cambios de la pregunta y respuesta
     public function save()
     {
         $this->validate([

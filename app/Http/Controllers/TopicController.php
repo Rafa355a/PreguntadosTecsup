@@ -10,7 +10,6 @@ class TopicController extends Controller
     public function show(Topic $topic)
     {
 
-        //El tema debe tener preguntas
         $topic->load('questions');
 
         if ($topic->questions->count() == 0) {

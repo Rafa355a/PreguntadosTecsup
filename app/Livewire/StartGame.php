@@ -21,6 +21,7 @@ class StartGame extends Component
 
     public $tiempo = 15;
 
+    //Se establece el número total de preguntas para el juego y se inicializa la pregunta actual.
     public function mount($topic)
     {
         $this->topic = $topic;
@@ -29,6 +30,7 @@ class StartGame extends Component
         $this->question = $this->topic->questions[$this->numPreguntaActual - 1];
     }
 
+    //El método verify se utiliza para verificar la respuesta actual.
     public function verify()
     {
 
@@ -55,6 +57,7 @@ class StartGame extends Component
 
     }
 
+    //llega a 0 y busca a verify
     public function temporizador()
     {
 
@@ -69,6 +72,7 @@ class StartGame extends Component
 
     }
 
+    //lleva a inicio
     public function render()
     {
         return view('livewire.start-game');

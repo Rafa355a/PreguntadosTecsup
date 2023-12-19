@@ -43,6 +43,7 @@ class NewQuestion extends Component
         $this->topic_id = $this->topics->first()->id;
     }
 
+    //valida y guarda pregunta
     public function save()
     {
 
@@ -69,6 +70,7 @@ class NewQuestion extends Component
         $this->reset(['name', 'options']);
     }
 
+    //crear y guardar nuevo tema
     public function saveTopic()
     {
         $this->validate([
